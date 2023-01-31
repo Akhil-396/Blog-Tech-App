@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/navbar.css" />
+
+<nav>
+    <div>
+      <img src="/images/post7.jpg" alt="logo" style="border-radius: 200px; margin-left: 30px; margin-top:20px;"/>
+    </div>
+
+    <ul>
+     <%if(loginUser){%>
+        <li>
+          <a href="/" class="navbar">Home</a>
+        </li>
+
+          <li>
+            <a href="/api/v1/users/profile-page" class="navbar">Profile</a>
+          </li>
+          <li>
+            <a href="/api/v1/users" class="navbar">Posts</a>
+        </li>
+          <li>
+            <a href="/api/v1/posts/get-post" class="create-post-btn">New Post</a>
+          </li>
+          <li>
+            <a href="/api/v1/users/user-logout"  class="create-logout-btn">Log Out</a>
+          </li>
+
+     <% }else{ %>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/api/v1/users" class="navbar">Posts</a>
+    </li>
+    <li>
+      <a href="/api/v1/users/login" class="navbar">Login</a>
+    </li>
+    <li>
+      <a href="/api/v1/users/register" class="navbar">Register</a>
+    </li>
+
+      <%}%>
+
+
+
+
+    </ul>
+  </nav>
